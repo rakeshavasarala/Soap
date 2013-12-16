@@ -14,7 +14,30 @@ public class NEWSoapRequest {
     public static File availabilityRequestFile = new File(baseUserDir + "/main/resources/testData/xml/availabilityRequest.properties");
     public static File xmlPropertiesFile = new File(baseUserDir + "/main/resources/testData/xml/request.properties");
 
-    //Method used to create the SOAP Request
+
+    public static SOAPMessage createSOAPRequest1() throws Exception {
+        MessageFactory messageFactory = MessageFactory.newInstance();
+        SOAPMessage soapMessage = messageFactory.createMessage();
+        SOAPPart soapPart = soapMessage.getSOAPPart();
+
+        // SOAP Envelope
+        SOAPEnvelope envelope = soapPart.getEnvelope();
+        envelope.addNamespaceDeclaration("tget", "http://www.ba.com/schema/availabilitycontroller/tGetCalendarAndFlightAvailabilityV1");
+
+
+        SOAPBody soapBody = envelope.getBody();
+        soapBody.addNamespaceDeclaration("ndc", "http://www.iata.org/IATA/NDC");
+        SOAPElement soapBodyElem = soapBody.addChildElement("MessageHeader");
+
+        System.out.println("Request SOAP Message = ");
+        soapMessage.writeTo(System.out);
+        System.out.println();
+        return soapMessage;
+
+
+    }
+
+        //Method used to create the SOAP Request
     public static SOAPMessage createSOAPRequest(String messageCreationDate) throws Exception {
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
@@ -71,6 +94,17 @@ public class NEWSoapRequest {
         soapBodyElem10.addTextNode("?");
         soapBodyElem11.addTextNode("?");
         soapBodyElem12.addTextNode("?");
+
+        SOAPElement soapBodyElementCAPHeader = soapBody.addChildElement("CAPHeader");
+        SOAPElement sessionID = soapBodyElementCAPHeader.addChildElement("SessionID");
+        sessionID.addTextNode("?");
+
+        SOAPElement parameters = soapBodyElementCAPHeader.addChildElement("Parameters");
+        SOAPElement name = parameters.addChildElement("ParameterName");
+        name.addTextNode("?");
+        SOAPElement value = parameters.addChildElement("ParameterValue");
+        value.addTextNode("?");
+
 
         soapMessage.saveChanges();
 

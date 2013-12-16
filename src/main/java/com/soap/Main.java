@@ -6,6 +6,7 @@ import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 
 import static com.soap.NEWSoapRequest.createSOAPRequest;
+import static com.soap.NEWSoapRequest.createSOAPRequest1;
 import static com.soap.NEWSoapResponse.printSOAPResponse;
 
 /**
@@ -27,7 +28,7 @@ public class Main {
         String url = "http://capdev422:8001/WebserviceWebFB/availabilitycontroller/WSGetCalendarAndFlightAvailabilityV1";
 
         createSOAPRequest("MessageCreationDate");
-
+        //createSOAPRequest1();
         //SOAPMessage soapResponse = soapConnection.call(createSOAPRequest("MessageCreationDate"), url);
 
         //printSOAPResponse(soapResponse);
