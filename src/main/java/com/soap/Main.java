@@ -26,7 +26,7 @@ public class Main {
 
         String url = "http://capdev422:8001/WebserviceWebFB/availabilitycontroller/WSGetCalendarAndFlightAvailabilityV1";
 
-        createSOAPRequest("MessageCreationDate");
+        createSOAPRequest();
 
         //SOAPMessage soapResponse = soapConnection.call(createSOAPRequest("MessageCreationDate"), url);
 
