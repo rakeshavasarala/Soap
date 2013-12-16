@@ -6,7 +6,6 @@ import javax.xml.soap.SOAPException;
 import javax.xml.soap.SOAPMessage;
 
 import static com.soap.NEWSoapRequest.createSOAPRequest;
-import static com.soap.NEWSoapRequest.createSOAPRequest1;
 import static com.soap.NEWSoapResponse.printSOAPResponse;
 
 /**
