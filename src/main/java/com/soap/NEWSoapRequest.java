@@ -15,7 +15,7 @@ public class NEWSoapRequest {
     public static File xmlPropertiesFile = new File(baseUserDir + "/main/resources/testData/xml/request.properties");
 
     //Method used to create the SOAP Request
-    public static SOAPMessage createSOAPRequest(String messageCreationDate) throws Exception {
+    public static SOAPMessage createSOAPRequest() throws Exception {
         MessageFactory messageFactory = MessageFactory.newInstance();
         SOAPMessage soapMessage = messageFactory.createMessage();
         SOAPPart soapPart = soapMessage.getSOAPPart();
@@ -46,7 +46,7 @@ public class NEWSoapRequest {
 //            System.out.println("THIS IS NOT NEEDED!!!!");
 //        }
 
-        SOAPElement soapBodyElem1 = soapBodyElem.addChildElement(messageCreationDate);
+        SOAPElement soapBodyElem1 = soapBodyElem.addChildElement("MessageCreationDate");
         SOAPElement soapBodyElem2 = soapBodyElem.addChildElement("MessageCreationTime");
         SOAPElement soapBodyElem3 = soapBodyElem.addChildElement("OriginatingSystem");
         SOAPElement soapBodyElem4 = soapBodyElem.addChildElement("OriginatingUser");
