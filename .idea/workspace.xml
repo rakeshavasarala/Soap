@@ -2,29 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee1502ce-baf0-4093-a884-3da9d6287d56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/soap/DefaultSOAPRequest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_core_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_java_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_junit_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_spring_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_3_2_2_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/RunTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/cucumber.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/feature1.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/soap/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/soap/NEWSoapRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/NEWSoapRequest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soap.iml" afterPath="$PROJECT_DIR$/Soap.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java" />
+      <change type="DELETED" beforePath="C:\Users\Rakesh\Documents\GitHub\Soap\src\main\java\com\soap\DefaultSOAPRequest.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Rakesh\Documents\GitHub\Soap\src\main\java\com\soap\DefaultSOAPRequest.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator.java" />
+      <change type="MOVED" beforePath="C:\Users\Rakesh\Documents\GitHub\Soap\src\test\resources\feature1.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/feature1.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Soap.iws" />
@@ -38,8 +20,9 @@
     <file path="/pom.xml" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387233186484" ignored="false" />
     <file path="/feature1.feature" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387235346016" ignored="false" />
     <file path="/SOAPMap.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387234827997" ignored="false" />
-    <file path="/DefaultSOAPRequest.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387236561936" ignored="false" />
+    <file path="/DefaultSOAPRequest.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387237186755" ignored="false" />
     <file path="/SoapTest.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387236478301" ignored="false" />
+    <file path="/DefaultValues.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387237176299" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +82,30 @@
     <favorites_list name="Soap" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="SOAPRequestCreator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="46" selection-start="646" selection-end="646" vertical-scroll-proportion="0.55689657">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultValues.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="32" selection-start="88" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -127,7 +133,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/soap/SOAPMap.java" />
         <option value="$PROJECT_DIR$/src/test/resources/feature1.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soap/DefaultSOAPRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator.java" />
       </list>
     </option>
   </component>
@@ -202,6 +210,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Soap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -314,6 +348,11 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Rakesh\Documents\GitHub\Soap\src\test\resources\features" />
+    </key>
   </component>
   <component name="RunManager" selected="JUnit.RunTests">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
@@ -494,7 +533,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="776" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -514,7 +553,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22933549" sideWeight="0.55250406" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22933549" sideWeight="0.55250406" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44749597" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -660,25 +699,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/feature1.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="68" selection-end="68" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/NEWSoapRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="95" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/DefaultSOAPRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="64" selection-start="1907" selection-end="1907" vertical-scroll-proportion="1.7017242">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -697,6 +720,31 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/RunTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="15" selection-start="182" selection-end="182" vertical-scroll-proportion="0.20067453">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/feature1.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="26" selection-start="157" selection-end="157" vertical-scroll-proportion="0.25801012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="32" selection-start="88" selection-end="101" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="46" selection-start="646" selection-end="646" vertical-scroll-proportion="0.55689657">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

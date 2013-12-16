@@ -1,7 +1,7 @@
 package com.soap.stepDefinitions;
 
 
-import com.soap.DefaultSOAPRequest;
+import com.soap.SOAPRequestCreator;
 import cucumber.api.java.en.Given;
 
 import java.util.HashMap;
@@ -23,7 +23,7 @@ public class SoapTest {
             map.put(nameValuePair[0].trim(), values[i] = nameValuePair[1].trim());
         }
 
-        new DefaultSOAPRequest().createSOAPRequest(map);
+        new SOAPRequestCreator().createSOAPRequest(map);
 
     }
 

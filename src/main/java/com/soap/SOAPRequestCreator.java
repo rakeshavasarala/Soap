@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class DefaultSOAPRequest {
+public class SOAPRequestCreator {
 
 
     public SOAPMessage createSOAPRequest(Map<String, String> map) throws Exception {
@@ -34,31 +34,11 @@ public class DefaultSOAPRequest {
 
     }
 
-    private Map<String, String> getMessageHeaderDefaultsAsMap() {
-        Map<String, String> map = new HashMap();
-
-        map.put("MessageCreationTime", "?");
-        map.put("OriginatingSystem", "?");
-        map.put("OriginatingSystem", "?");
-        map.put("OriginatingUser", "?");
-        map.put("OriginatingTerminal", "?");
-        map.put("OriginatingTransaction", "?");
-        map.put("MessageSequenceNumber", "?");
-        map.put("MessageBatchNumber", "?");
-        map.put("TotalMessagesInBatch", "?");
-        map.put("MessageSequenceWithinBatch", "?");
-        map.put("Version", "?");
-        map.put("ResponseTime", "?");
-
-
-        return map;
-    }
-
 
     public SOAPElement updateMessageHeader(SOAPBody soapBody, Map<String, String> map) throws SOAPException {
         SOAPElement soapBodyElem = soapBody.addChildElement("MessageHeader");
 
-        Map<String, String> newMap = getMessageHeaderDefaultsAsMap();
+        Map<String, String> newMap = DefaultValues.getMessageHeaderDefaultsAsMap();
         newMap.putAll(map);
 
         for(Map.Entry<String, String> entry : newMap.entrySet()){
