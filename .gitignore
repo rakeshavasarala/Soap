@@ -21,3 +21,4 @@ src/main/resources/target/
 src/main/resources/testdata/batch/
 target/
 jacoco-it.exec
+.idea/workspace.xml

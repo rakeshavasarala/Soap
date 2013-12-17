@@ -8,7 +8,10 @@ import java.util.Map;
 
 public final class DefaultValues {
 
-
+    /**
+     * All the fields for Message Header
+     * @return
+     */
     public static List<String> messageHeaderFields() {
         List<String> fields = new ArrayList();
         fields.add("MessageCreationDate");
@@ -25,7 +28,10 @@ public final class DefaultValues {
         return fields;
     }
 
-
+    /**
+     * Not Used an more
+     * @return
+     */
     public static Map<String, String> getMessageHeaderDefaultsAsMap() {
         Map<String, String> map = new HashMap();
         map.put("MessageCreationDate", "?");
@@ -44,6 +50,13 @@ public final class DefaultValues {
         return map;
     }
 
+
+    /**
+     * All the fields for CAPHeader.
+     * See how the heirarcy of elements is specified under capHeader
+     * UserSellingProfile->SellingRevenueType->CommercialRevenueType->SubRevenueType
+     * @return
+     */
     public static List<String> capHeaderFields() {
         List<String> fields = new ArrayList();
         fields.add("SessionID");
