@@ -7,4 +7,13 @@ Feature: Test Feature 1
     """
       MessageCreationDate: Today
       OriginatingSystem: XP
+      UnWantedField:willNotBeAdded
+      SessionID:SessionId
+      OfficeID:BAOffice
+      AgentID:Agent1
+      ParameterName:name
+      ParameterValue:value
+      CommercialRevenueType->SubRevenueType:commercial
+      RedemptionRevenueType->SubRevenueType:redemption
+      RebateRevenueType->SubRevenueType:rebate
     """

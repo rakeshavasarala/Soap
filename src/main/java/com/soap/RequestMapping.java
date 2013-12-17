@@ -8,4 +8,9 @@ package com.soap;
  * To change this template use File | Settings | File Templates.
  */
 public enum RequestMapping {
+
+      ancd
+
+    //private RequestMapping(String parent)
+
 }
