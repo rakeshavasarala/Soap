@@ -70,7 +70,7 @@ public final class DefaultValues {
         fields.add("UserSellingProfile->Audience");
 
         fields.add("UserSellingProfile->SellingRevenueType->CommercialRevenueType->SubRevenueType");
-        fields.add("UserSellingProfile->SellingRevenueType->RedemptionRevenueType->SubRevenueType");
+        fields.add("UserSellingProfile->SellingRevenueType->RedemptionRevenueType->BAMiles->SubRevenueType");
         fields.add("UserSellingProfile->SellingRevenueType->RebateRevenueType->SubRevenueType");
 
         fields.add("AgentCredentials->OfficeID");
@@ -80,6 +80,40 @@ public final class DefaultValues {
         fields.add("DiagnosticsID");
         fields.add("CachingRequired");
         fields.add("TrackingID");
+
+        return fields;
+    }
+
+
+    public static List<String> commonParametersFields() {
+        List<String> fields = new ArrayList();
+        fields.add("OriginDestinationOption->OriginLocationCode");
+        fields.add("OriginDestinationOption->OriginDateTime");
+        fields.add("OriginDestinationOption->DestinationLocationCode");
+        fields.add("OriginDestinationOption->DestinationDateTime");
+
+        fields.add("OriginDestinationOption->CabinRestriction->CabinCode");
+        fields.add("OriginDestinationOption->CabinRestriction->RestrictionType");
+        fields.add("OriginDestinationOption->CabinRestriction->HBOFare");
+
+        fields.add("OriginLocationType");
+        fields.add("DestinationLocationType");
+
+        fields.add("PassengerCount->NumberOfAdults");
+        fields.add("PassengerCount->NumberOfChildren");
+        fields.add("PassengerCount->NumberOfInfants");
+
+
+        fields.add("CabinRestriction->CabinCode");
+        fields.add("CabinRestriction->RestrictionType");
+        fields.add("CabinRestriction->HBOFare");
+
+
+        fields.add("OutboundDateRange");
+        fields.add("InboundDateRange");
+        fields.add("SelectedValue");
+        fields.add("SelectedHBOValue");
+
 
         return fields;
     }

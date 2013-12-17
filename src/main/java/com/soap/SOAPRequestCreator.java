@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.soap.DefaultValues.capHeaderFields;
+import static com.soap.DefaultValues.commonParametersFields;
 import static com.soap.DefaultValues.messageHeaderFields;
 
 
@@ -36,15 +37,14 @@ public class SOAPRequestCreator {
         soapBody.addNamespaceDeclaration("ndc", "http://www.iata.org/IATA/NDC");
     }
 
-    public SOAPMessage createSOAPRequest(Map<String, String> map) throws Exception {
+    public SOAPMessage createSOAPRequest(Map<String, String> mapFromFeatureFile) throws Exception {
 
-
-        //updateMessageHeader(map);
-        updateHeader("MessageHeader", messageHeaderFields(), map);
+        updateHeader("MessageHeader", messageHeaderFields(), mapFromFeatureFile);
         soapMessage.saveChanges();
-        updateHeader("CAPHeader", capHeaderFields(), map);
+        updateHeader("CAPHeader", capHeaderFields(), mapFromFeatureFile);
         soapMessage.saveChanges();
-
+        updateHeader("CommonParameters", commonParametersFields(), mapFromFeatureFile);
+        soapMessage.saveChanges();
         // Check the input
         System.out.println("Request SOAP Message = ");
         soapMessage.writeTo(System.out);
@@ -53,11 +53,9 @@ public class SOAPRequestCreator {
 
     }
 
-    public SOAPElement updateHeader(String headerName, List<String> defaultFields, Map<String, String> map) throws SOAPException {
-        SOAPElement soapBodyElem = soapBody.addChildElement(headerName);
 
+    private Map<String, String> updateMapWithDefaultMissingValues(List<String> defaultFields, Map<String, String> map) {
         Map<String, String> newMap = new HashMap<String, String>();
-
 
         for (String field : defaultFields) {
             String value = map.get(field);
@@ -83,6 +81,13 @@ public class SOAPRequestCreator {
             }
         }
 
+        return newMap;
+    }
+
+    public SOAPElement updateHeader(String headerName, List<String> defaultFields, Map<String, String> mapFromFeatureFile) throws SOAPException {
+        SOAPElement soapBodyElem = soapBody.addChildElement(headerName);
+        Map<String, String> newMap = updateMapWithDefaultMissingValues(defaultFields, mapFromFeatureFile);
+
         Map<String, SOAPElement> map2 = new HashMap<String, SOAPElement>();
 
         for(Map.Entry<String, String> entry : newMap.entrySet()){
@@ -91,7 +96,7 @@ public class SOAPRequestCreator {
 
             if (key.contains("->")) {
                 String[] keys = key.split("->");
-                SOAPElement currentElement = null;
+                SOAPElement currentElement;
                 SOAPElement prevElement = null;
                 String tempKey = null;
                 for (int i = 0; i < keys.length; i++) {
@@ -101,24 +106,22 @@ public class SOAPRequestCreator {
                     } else {
                         tempKey = tempKey + "->" + keys[i];
                     }
-
+                    currentElement = map2.get(tempKey);
 
                     if (i == 0) {
-                        currentElement = map2.get(tempKey);
                         if (null == currentElement) {
                             currentElement = soapBodyElem.addChildElement(keys[i]);
                             map2.put(tempKey, currentElement);
                         }
-                        prevElement = currentElement;
-
                     } else {
-                        currentElement = map2.get(tempKey);
                         if (null != prevElement && null == currentElement) {
                             currentElement = prevElement.addChildElement(keys[i]);
                             map2.put(tempKey, currentElement);
                         }
-                        prevElement = currentElement;
                     }
+
+                    prevElement = currentElement;
+
                     if (i == keys.length - 1) {
                         if (entry.getKey().endsWith(keys[i])) {
                             currentElement.addTextNode(newMap.get(entry.getKey()));

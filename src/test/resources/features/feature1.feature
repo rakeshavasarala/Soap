@@ -14,6 +14,6 @@ Feature: Test Feature 1
       ParameterName:name
       ParameterValue:value
       CommercialRevenueType->SubRevenueType:commercial
-      RedemptionRevenueType->SubRevenueType:redemption
+      BAMiles->SubRevenueType:redemption
       RebateRevenueType->SubRevenueType:rebate
     """
