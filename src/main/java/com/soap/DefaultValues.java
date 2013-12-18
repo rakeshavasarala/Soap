@@ -9,6 +9,19 @@ import java.util.Map;
 public final class DefaultValues {
 
     /**
+     * Have not added all the fields.
+     * @return
+     */
+    public static List<String> fieldsDirectlyToBody() {
+        List<String> fields = new ArrayList();
+        fields.add("CUGIdentifer");
+        fields.add("PointOfSale");
+        fields.add("AvailabilityEngineSelectionCriteria");
+        fields.add("TypeOfAvailabilitySearch");
+        return fields;
+    }
+
+    /**
      * All the fields for Message Header
      * @return
      */

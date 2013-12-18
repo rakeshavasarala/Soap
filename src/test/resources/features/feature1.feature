@@ -16,4 +16,6 @@ Feature: Test Feature 1
       CommercialRevenueType->SubRevenueType:commercial
       BAMiles->SubRevenueType:redemption
       RebateRevenueType->SubRevenueType:rebate
+      CUGIdentifer:AddDirectlyToBody
+      PointOfSale:AddDirectlyToBody
     """

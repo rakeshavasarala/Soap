@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static com.soap.DefaultValues.capHeaderFields;
 import static com.soap.DefaultValues.commonParametersFields;
+import static com.soap.DefaultValues.fieldsDirectlyToBody;
 import static com.soap.DefaultValues.messageHeaderFields;
 
 
@@ -22,6 +23,7 @@ public class SOAPRequestCreator {
     SOAPBody soapBody;
     SOAPMessage soapMessage;
     SOAPPart soapPart;
+    SOAPElement getCalendarAndFlightAvailabilityRequestHeader;
 
     public SOAPRequestCreator() throws SOAPException {
         MessageFactory messageFactory = MessageFactory.newInstance();
@@ -35,10 +37,14 @@ public class SOAPRequestCreator {
         // SOAP Body
         soapBody = envelope.getBody();
         soapBody.addNamespaceDeclaration("ndc", "http://www.iata.org/IATA/NDC");
+
+        getCalendarAndFlightAvailabilityRequestHeader = soapBody.addChildElement("getCalendarAndFlightAvailabilityRequestHeader");
     }
 
     public SOAPMessage createSOAPRequest(Map<String, String> mapFromFeatureFile) throws Exception {
 
+        addDirectlyToBody(fieldsDirectlyToBody(), mapFromFeatureFile);
+        soapMessage.saveChanges();
         updateHeader("MessageHeader", messageHeaderFields(), mapFromFeatureFile);
         soapMessage.saveChanges();
         updateHeader("CAPHeader", capHeaderFields(), mapFromFeatureFile);
@@ -84,8 +90,21 @@ public class SOAPRequestCreator {
         return newMap;
     }
 
-    public SOAPElement updateHeader(String headerName, List<String> defaultFields, Map<String, String> mapFromFeatureFile) throws SOAPException {
-        SOAPElement soapBodyElem = soapBody.addChildElement(headerName);
+    public void addDirectlyToBody(List<String> defaultFields, Map<String, String> mapFromFeatureFile) throws SOAPException {
+
+        Map<String, String> newMap = updateMapWithDefaultMissingValues(defaultFields, mapFromFeatureFile);
+
+        SOAPElement soapElement = null;
+        for (Map.Entry<String, String> entry : newMap.entrySet()) {
+            soapElement = getCalendarAndFlightAvailabilityRequestHeader.addChildElement(entry.getKey());
+            soapElement.addTextNode(entry.getValue());
+        }
+        soapMessage.saveChanges();
+    }
+
+
+    public void updateHeader(String headerName, List<String> defaultFields, Map<String, String> mapFromFeatureFile) throws SOAPException {
+        SOAPElement soapBodyElem = getCalendarAndFlightAvailabilityRequestHeader.addChildElement(headerName);
         Map<String, String> newMap = updateMapWithDefaultMissingValues(defaultFields, mapFromFeatureFile);
 
         Map<String, SOAPElement> map2 = new HashMap<String, SOAPElement>();
@@ -133,7 +152,8 @@ public class SOAPRequestCreator {
                 soapElement.addTextNode(entry.getValue());
             }
         }
-        return soapBodyElem;
+        soapMessage.saveChanges();
     }
+
 
 }
