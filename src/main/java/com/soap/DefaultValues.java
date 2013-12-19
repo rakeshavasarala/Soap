@@ -131,4 +131,22 @@ public final class DefaultValues {
         return fields;
     }
 
+
+    public static List<String> originalDestination() {
+        List<String> fields = new ArrayList();
+        fields.add("Departure->CityCode");
+        fields.add("TravelDateTime->DateData->Date");
+        fields.add("TravelDateTime->TimeData->Time");
+        fields.add("Arrival->CityCode");
+        return fields;
+    }
+
+
+    public static List<String> travelerQNames() {
+        List<String> fields = new ArrayList();
+        fields.add("Traveler->PaxType=ADT");
+        fields.add("Traveler->PaxType=CHD");
+        fields.add("Traveler->PaxType=INF");
+        return fields;
+    }
 }

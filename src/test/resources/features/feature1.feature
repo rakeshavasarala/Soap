@@ -18,4 +18,5 @@ Feature: Test Feature 1
       RebateRevenueType->SubRevenueType:rebate
       CUGIdentifer:AddDirectlyToBody
       PointOfSale:AddDirectlyToBody
+      Traveler->PaxType=ADT:FromFeatureFile
     """
