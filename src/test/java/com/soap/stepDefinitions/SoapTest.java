@@ -11,6 +11,8 @@ import static com.soap.DefaultValues.capHeaderFields;
 import static com.soap.DefaultValues.commonParametersFields;
 import static com.soap.DefaultValues.fieldsDirectlyToBody;
 import static com.soap.DefaultValues.messageHeaderFields;
+import static com.soap.DefaultValues.originalDestination;
+import static com.soap.DefaultValues.travelerQNames;
 
 public class SoapTest {
 
@@ -42,6 +44,36 @@ public class SoapTest {
                 .saveChanges()
                 .print();
 
+
+        new SOAPRequestBuilder()
+                .addElementToBody("AirShoppingRQ", "ndc", "http://www.iata.org/IATA/NDC")
+                .updateElementNameSpace("AirShoppingRQ", "com", "http://www.iata.org/IATA/NDC/common")
+                .addHeader("AirShoppingRQ", "OriginDestination", originalDestination(), map)
+                .addHeader("AirShoppingRQ", "OriginDestination", originalDestination(), map)
+                .addElementToParent("OriginDestination", "TravelerCount", "ndc")
+                .addElementToParent("TravelerCount", "Traveler", "ndc")
+                        // .addQElement("Traveler", "PaxType", "ADT", "2")
+                .addQNames("TravelerCount",travelerQNames(), map)
+                .saveChanges()
+                .print();
+
+
+        /*new SOAPRequestBuilder()
+                .addElementToBody("AirShoppingRQ", "ndc", "http://www.iata.org/IATA/NDC")
+                .updateElementNameSpace("AirShoppingRQ", "com", "http://www.iata.org/IATA/NDC/common")
+                .addElementToParent("AirShoppingRQ", "OriginDestination", "ndc")
+                .addElementToParent("OriginDestination", "Departure", "ndc")
+                .addElementToParent("Departure", "CityCode", "ndc")
+
+                .addElementToParent("AirShoppingRQ", "OriginDestination", "ndc")
+                .addElementToParent("OriginDestination", "Departure", "ndc")
+                .addElementToParent("Departure", "CityCode", "ndc")
+                .addElementToParent("OriginDestination", "TravelerCount", "ndc")
+                .addElementToParent("TravelerCount", "Traveler", "ndc")
+
+                        //.addOrUpdateHeader("AirShoppingRQ", "TravelerCount", null, null)
+                .print();
+        ;*/
 
     }
 
