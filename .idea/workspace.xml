@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee1502ce-baf0-4093-a884-3da9d6287d56" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/SoapUnitTest.java" />
+      <change type="DELETED" beforePath="C:\Users\Rakesh\Documents\GitHub\Soap\src\main\java\com\soap\CalendarAndFlightAvailabilityRequest.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/soap/builders/SOAPRequestBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/builders/SOAPRequestBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Soap.iml" afterPath="$PROJECT_DIR$/Soap.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java" afterPath="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/features/feature1.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/feature1.feature" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Soap.iws" />
@@ -17,6 +18,7 @@
     <file path="/fragment.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387399897251" ignored="false" />
     <file path="/SoapTest.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387400007051" ignored="false" />
     <file path="/SOAPRequestCreator1.java" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387400070544" ignored="false" />
+    <file path="/.gitignore" changelist="ee1502ce-baf0-4093-a884-3da9d6287d56" time="1387581965668" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +79,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SOAPRequestCreator1.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SOAPRequestCreator1.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="81" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.8279933">
+            <state line="17" column="43" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3304#3320#0" expanded="true" />
+                <element signature="e#5190#5211#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SoapTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="48" selection-start="958" selection-end="958" vertical-scroll-proportion="0.49827588">
               <folding />
             </state>
           </provider>
@@ -115,11 +130,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/soap/RequestMapping.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/feature1.feature" />
         <option value="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/soap/builders/SOAPRequestBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -625,7 +640,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="776" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -801,18 +816,6 @@
         <state line="2" column="39" selection-start="29" selection-end="29" vertical-scroll-proportion="0.043636363" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="31" selection-start="262" selection-end="262" vertical-scroll-proportion="0.495" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="80" selection-start="958" selection-end="958" vertical-scroll-proportion="0.49827588">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/DefaultValues.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="134" column="51" selection-start="4413" selection-end="4413" vertical-scroll-proportion="0.311973">
@@ -837,9 +840,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="46" selection-start="82" selection-end="82" vertical-scroll-proportion="0.25801012">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/soap/SOAPRequestCreator1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="81" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.8279933">
+        <state line="17" column="43" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3304#3320#0" expanded="true" />
+            <element signature="e#5190#5211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/soap/stepDefinitions/SoapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="48" selection-start="958" selection-end="958" vertical-scroll-proportion="0.49827588">
           <folding />
         </state>
       </provider>

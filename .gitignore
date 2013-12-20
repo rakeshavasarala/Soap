@@ -1,4 +1,6 @@
 .idea/
+.idea/workspace.xml
+.idea/misc.xml
 *.iml
 *.ipr
 *.iws
