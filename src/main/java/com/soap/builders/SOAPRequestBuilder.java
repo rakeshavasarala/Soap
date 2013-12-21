@@ -272,19 +272,13 @@ public class SOAPRequestBuilder {
                 System.out.println("Key = " + key);
 
                 String[] keys = key.split("->");
-<<<<<<< HEAD
-                SOAPElement soapElement =  parentSOAPElement.addChildElement(keys[0]);
 
-                // addQElement(String element, String qName, String attribute, String value)
-
-                addQElement(soapElement, keys[1].split("=")[0], keys[1].split("=")[1], entry.getValue());
-=======
                SOAPElement soapElement =  parentSOAPElement.addChildElement(keys[0]);
 
                 // addQElement(String element, String qName, String attribute, String value)
 
                   addQElement(soapElement, keys[1].split("=")[0], keys[1].split("=")[1], entry.getValue());
->>>>>>> 1bd462c9264d7bb747b0069ce47a586eae7b60ed
+
 
             }
         } else {

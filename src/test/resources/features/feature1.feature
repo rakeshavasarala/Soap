@@ -1,4 +1,4 @@
-@now
+
 Feature: Test Feature 1
 
   Scenario: Scenario 1

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ndc:AirShoppingRQ xmlns:ndc="http://www.iata.org/IATA/NDC" xmlns:com="http://www.iata.org/IATA/NDC/common">
+   <ndc:OriginDestination>
+      <ndc:Departure>
+         <ndc:CityCode>LHR</ndc:CityCode>
+      </ndc:Departure>
+      <ndc:TravelDateTime>
+         <ndc:DateData>
+            <ndc:Date>2013-11-30Z</ndc:Date>
+         </ndc:DateData>
+         <ndc:TimeData>
+            <ndc:Time>00:00:00+00:00</ndc:Time>
+         </ndc:TimeData>
+      </ndc:TravelDateTime>
+      <ndc:Arrival>
+         <ndc:CityCode>AMS</ndc:CityCode>
+      </ndc:Arrival>
+   </ndc:OriginDestination>
+   <ndc:OriginDestination>
+      <ndc:Departure>
+         <ndc:CityCode>AMS</ndc:CityCode>
+      </ndc:Departure>
+      <ndc:TravelDateTime>
+         <ndc:DateData>
+            <ndc:Date>2013-12-07Z</ndc:Date>
+         </ndc:DateData>
+         <ndc:TimeData>
+            <ndc:Time>00:00:00+00:00</ndc:Time>
+         </ndc:TimeData>
+      </ndc:TravelDateTime>
+      <ndc:Arrival>
+         <ndc:CityCode>LHR</ndc:CityCode>
+      </ndc:Arrival>
+   </ndc:OriginDestination>
+   <ndc:TravelerCount>
+      <ndc:Traveler com:PaxType="ADT">2</ndc:Traveler>
+      <ndc:Traveler com:PaxType="CHD">2</ndc:Traveler>
+      <ndc:Traveler com:PaxType="INF">2</ndc:Traveler>
+   </ndc:TravelerCount>
+   <ndc:AttributeData>
+      <ndc:Cabin>M</ndc:Cabin>
+   </ndc:AttributeData>
+</ndc:AirShoppingRQ>

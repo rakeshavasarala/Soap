@@ -4,6 +4,8 @@ package com.soap.stepDefinitions;
 import com.soap.builders.SOAPRequestBuilder;
 import cucumber.api.java.en.Given;
 
+import javax.xml.soap.SOAPBody;
+import javax.xml.soap.SOAPMessage;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,7 +47,7 @@ public class SoapTest {
                 .print();
 
 
-        new SOAPRequestBuilder()
+        SOAPRequestBuilder builder  =  new SOAPRequestBuilder()
                 .addElementToBody("AirShoppingRQ", "ndc", "http://www.iata.org/IATA/NDC")
                 .updateElementNameSpace("AirShoppingRQ", "com", "http://www.iata.org/IATA/NDC/common")
                 .addHeader("AirShoppingRQ", "OriginDestination", originalDestination(), map)
@@ -54,8 +56,24 @@ public class SoapTest {
                 .addElementToParent("TravelerCount", "Traveler", "ndc")
                         // .addQElement("Traveler", "PaxType", "ADT", "2")
                 .addQNames("TravelerCount",travelerQNames(), map)
-                .saveChanges()
-                .print();
+                .saveChanges();
+                //.getSoapMessage();
+                //.print();
+
+        builder.print();
+        SOAPMessage soapMessage = builder.getSoapMessage();
+
+        System.out.println(soapMessage);
+
+       SOAPBody soapBody  = soapMessage.getSOAPBody();
+
+
+       // soapBody.get
+
+       while(soapBody.getChildElements().hasNext()) {
+
+       }
+
 
 
         /*new SOAPRequestBuilder()

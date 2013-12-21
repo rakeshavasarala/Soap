@@ -149,4 +149,26 @@ public final class DefaultValues {
         fields.add("Traveler->PaxType=INF");
         return fields;
     }
+
+
+    public static Map<String, String> airShoppingDefaultValues() {
+       Map<String, String> map = new HashMap<>();
+
+        map.put("OriginDestination[0].Departure.CityCode", "?");
+        map.put("OriginDestination[0].Date", "?");
+        map.put("OriginDestination[0].Time", "?");
+        map.put("OriginDestination[0].Arrival.CityCode", "?");
+        map.put("OriginDestination[1].Departure.CityCode", "?");
+        map.put("OriginDestination[1].Date", "?");
+        map.put("OriginDestination[1].Time", "?");
+        map.put("OriginDestination[1].Arrival.CityCode", "?");
+        map.put("PaxType.ADT", "?");
+        map.put("PaxType.CHD", "?");
+        map.put("PaxType.INF", "?");
+        map.put("Cabin", "?");
+
+        return map;
+    }
+
+
 }
