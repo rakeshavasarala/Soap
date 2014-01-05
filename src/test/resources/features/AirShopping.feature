@@ -1,6 +1,6 @@
 
 Feature: Test Feature
-  @now
+
   Scenario: replace values
     Given I have a default AirShopping Request
     When I replace the following values in the Request

@@ -1,15 +1,11 @@
 package com.soap;
 
-import org.w3c.dom.*;
-import org.w3c.dom.Node;
-
 import javax.xml.namespace.QName;
 import javax.xml.soap.*;
 import javax.xml.transform.*;
 import javax.xml.transform.stream.StreamResult;
 import java.io.IOException;
 import java.util.Iterator;
-import java.util.List;
 
 
 public class BuildProperSoapMessage {

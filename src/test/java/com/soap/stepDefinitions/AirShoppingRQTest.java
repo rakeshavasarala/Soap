@@ -16,7 +16,8 @@ import java.util.Map;
 
 public class AirShoppingRQTest {
 
-    String pathToFile = "src/main/resources/xmls/IntSOAPRQ_Default.xml";
+    //String pathToFile = "src/main/resources/xmls/IntSOAPRQ_Default.xml";
+    String pathToFile = "src/main/resources/xmls/IntSOAPRQ_Default_Without_SOAP_Parts.xml";
     String defaultSOAPMessageString;
 
     /**
@@ -28,6 +29,8 @@ public class AirShoppingRQTest {
         List<String> lines = Files.readAllLines(Paths.get(new File(".").getCanonicalPath(), pathToFile), Charset.defaultCharset());
         defaultSOAPMessageString = StringUtils.join(lines, "\n");
     }
+
+
 
     /**
      *

@@ -1,0 +1,42 @@
+<ndc:AirShoppingRQ xmlns:ndc="http://www.iata.org/IATA/NDC" xmlns:com="http://www.iata.org/IATA/NDC/common">
+   <ndc:OriginDestination>
+      <ndc:Departure>
+         <ndc:CityCode>OriginDestination[0].Departure.CityCode</ndc:CityCode>
+      </ndc:Departure>
+      <ndc:TravelDateTime>
+         <ndc:DateData>
+            <ndc:Date>OriginDestination[0].Date</ndc:Date>
+         </ndc:DateData>
+         <ndc:TimeData>
+            <ndc:Time>OriginDestination[0].Time</ndc:Time>
+         </ndc:TimeData>
+      </ndc:TravelDateTime>
+      <ndc:Arrival>
+         <ndc:CityCode>OriginDestination[0].Arrival.CityCode</ndc:CityCode>
+      </ndc:Arrival>
+   </ndc:OriginDestination>
+   <ndc:OriginDestination>
+      <ndc:Departure>
+         <ndc:CityCode>OriginDestination[1].Departure.CityCode</ndc:CityCode>
+      </ndc:Departure>
+      <ndc:TravelDateTime>
+         <ndc:DateData>
+            <ndc:Date>OriginDestination[1].Date</ndc:Date>
+         </ndc:DateData>
+         <ndc:TimeData>
+            <ndc:Time>OriginDestination[1].Time</ndc:Time>
+         </ndc:TimeData>
+      </ndc:TravelDateTime>
+      <ndc:Arrival>
+         <ndc:CityCode>OriginDestination[1].Arrival.CityCode</ndc:CityCode>
+      </ndc:Arrival>
+   </ndc:OriginDestination>
+   <ndc:TravelerCount>
+      <ndc:Traveler com:PaxType="ADT">PaxType.ADT</ndc:Traveler>
+      <ndc:Traveler com:PaxType="CHD">PaxType.CHD</ndc:Traveler>
+      <ndc:Traveler com:PaxType="INF">PaxType.INF</ndc:Traveler>
+   </ndc:TravelerCount>
+   <ndc:AttributeData>
+      <ndc:Cabin>Cabin</ndc:Cabin>
+   </ndc:AttributeData>
+</ndc:AirShoppingRQ>
